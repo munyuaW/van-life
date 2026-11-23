@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Vans() {
   const [vans, setVans] = React.useState([]);
@@ -11,14 +12,16 @@ function Vans() {
 
   const vanCardsElems = vans.map((van) => (
     <div key={van.id} className="van-tile">
-      <img alt={van.name} src={van.imageUrl} />
-      <div className="van-info">
-        <h3>{van.name}</h3>
-        <p>
-          ${van.price}
-          <span>/day</span>
-        </p>
-      </div>
+      <Link to={`/vans/${van.id}`}>
+        <img alt={van.name} src={van.imageUrl} />
+        <div className="van-info">
+          <h3>{van.name}</h3>
+          <p>
+            ${van.price}
+            <span>/day</span>
+          </p>
+        </div>
+      </Link>
       <i className={`van-type ${van.type} selected`}>{van.type}</i>
     </div>
   ));
