@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function HostLayout() {
   const activeLink = {
@@ -17,17 +17,17 @@ function HostLayout() {
           Dashboard
         </NavLink>
         <NavLink
-          to="/host/income"
+          to="income"
           style={({ isActive }) => (isActive ? activeLink : {})}>
           Income
         </NavLink>
         <NavLink
-          to="/host/vans"
+          to="vans"
           style={({ isActive }) => (isActive ? activeLink : {})}>
           Vans
         </NavLink>
         <NavLink
-          to="/host/reviews"
+          to="reviews"
           style={({ isActive }) => (isActive ? activeLink : {})}>
           Reviews
         </NavLink>

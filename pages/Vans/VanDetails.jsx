@@ -10,6 +10,7 @@ function VanDetails() {
       .then((res) => res.json())
       .then((data) => setVan(data.vans));
   }, [params.id]);
+
   return (
     <div className="van-detail-container">
       {van ?
