@@ -226,9 +226,9 @@ footer {
     transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .van-type:hover {
+.van-type:hover {
     color: #FFEAD0;
-} */
+}
 
 .van-type:focus {
     outline: none;
